@@ -1,0 +1,31 @@
+[package]
+name = "xml_bench"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "benchmark"
+path = "src/main.rs"
+
+[dependencies]
+xmlity = { version = "0.0.8", features = ["derive"] }
+xmlity-quick-xml = { version = "0.0.8" }
+yaserde = { version = "0.12.0", features = ["derive"] }
+instant-xml = { git = "https://github.com/vshashi01/instant-xml", branch = "main" }
+hotpath = { version = "0.4.1" }
+smol = { version = "2.0.2" }
+
+
+[dev-dependencies]
+pretty_assertions = { version = "1.4.1" }
+criterion = { version = "0.7.0" }
+
+[features]
+default = ["instant-xml", "yaserde", "xmlity"]
+instant-xml = []
+yaserde = []
+xmlity = []
+hotpath = ["hotpath/hotpath"]
+hotpath-alloc-bytes-total = ["hotpath/hotpath-alloc-bytes-total"]
+hotpath-alloc-count-total = ["hotpath/hotpath-alloc-count-total"]
+hotpath-off = ["hotpath/hotpath-off"]
