@@ -48,4 +48,12 @@ fn main() {
         println!("Writing using Xmlity");
         write_mesh_xmlity(&mesh, 87916516);
     }
+
+    #[cfg(feature = "roxmltree")]
+    {
+        use xml_bench::read_mesh_roxmltree;
+
+        println!("Reading using roxmltree from : {:?}", path);
+        let _ = read_mesh_roxmltree(&path, 1205286, 573311);
+    }
 }
