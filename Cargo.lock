@@ -667,6 +667,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "fast-float2"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f8eb564c5c7423d25c886fb561d1e4ee69f72354d16918afa32c08811f6b6a55"
+
+[[package]]
 name = "fastrand"
 version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2126,6 +2132,7 @@ name = "xml_bench"
 version = "0.1.0"
 dependencies = [
  "criterion",
+ "fast-float2",
  "hotpath",
  "instant-xml",
  "pretty_assertions",
